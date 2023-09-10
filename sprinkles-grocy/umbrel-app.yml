@@ -5,7 +5,7 @@ tagline: ERP beyond your fridge
 icon: https://github.com/patzly/grocy-android/blob/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png
 category: files
 version: "4.0.3"
-port: 9999
+port: 8080
 description: ERP beyond your fridge - Grocy is a web-based self-hosted groceries & household management solution for your home
 developer: Grocy
 website: https://grocy.info/
