@@ -31,8 +31,7 @@ services:
       - /tmp
       - /var/www/data/viewcache:mode=755,uid=82,gid=82,size=16m
     volumes:
-      # - ${APP_DATA_DIR}/data:/var/www/data
-      - ./data:/var/www/data
+      - ${APP_DATA_DIR}/data:/var/www/data
     environment:
       - GROCY_MODE=production
       - GROCY_CULTURE=en
