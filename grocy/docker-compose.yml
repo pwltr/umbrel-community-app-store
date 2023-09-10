@@ -1,0 +1,40 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: grocy_web_1
+      APP_PORT: 8080
+
+  web:
+    image: "grocy/frontend:v4.0.3"
+    init: true
+    restart: on-failure
+    stop_grace_period: 1m
+    depends_on:
+      - backend
+    ports:
+      - "8080:8080"
+    read_only: true
+    tmpfs:
+      - /tmp
+
+  backend:
+    image: "grocy/backend:v4.0.3"
+    init: true
+    # user: "1000:1000"
+    restart: on-failure
+    stop_grace_period: 1m
+    read_only: true
+    tmpfs:
+      - /tmp
+      - /var/www/data/viewcache:mode=755,uid=82,gid=82,size=16m
+    volumes:
+      - ${APP_DATA_DIR}/data:/var/www/data
+    environment:
+      - GROCY_MODE=production
+      - GROCY_CULTURE=en
+      - MAX_UPLOAD=50M
+      - PHP_MAX_FILE_UPLOAD=200
+      - PHP_MAX_POST=100M
+      - PHP_MEMORY_LIMIT=512M

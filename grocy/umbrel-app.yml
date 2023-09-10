@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: grocy
+name: Grocy
+tagline: ERP beyond your fridge
+icon: https://github.com/patzly/grocy-android/blob/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png
+category: files
+version: "4.0.3"
+port: 9999
+description: ERP beyond your fridge - Grocy is a web-based self-hosted groceries & household management solution for your home
+developer: Grocy
+website: https://grocy.info/
+submitter: pwltr
+submission: https://github.com/getumbrel/umbrel-hello-world-app
+repo: https://github.com/grocy/grocy
+support: https://github.com/grocy/grocy/issues
+gallery:
+  - https://i.imgur.com/yyVG0Jb.jpeg
+  - https://i.imgur.com/yyVG0Jb.jpeg
+  - https://i.imgur.com/yyVG0Jb.jpeg
+releaseNotes: >-
+  Add what's new in the latest version of your app here.
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
